@@ -1,0 +1,74 @@
+.footer
+  margin: 55px 0 110px
+  &-wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &-social
+    margin-right: 82px
+    display: flex
+    gap: 20px
+    &__item
+      width: 77px
+      height: 77px
+    &__link
+      display: block
+      position: relative
+      width: 77px
+      height: 77px
+      &::after
+        position: absolute
+        content: ''
+        background-repeat: no-repeat
+        background-size: cover
+        width: 77px
+        height: 77px
+      &.twitter
+        &::after
+          background-image: url('../images/footer-twitter.png')
+      &.discord
+        &::after
+          background-image: url('../images/footer-discord.png')
+      &.social
+        &::after
+          background-image: url('../images/footer-social.png')
+      &.mail
+        &::after
+          background-image: url('../images/footer-mail.png')
+
+  &__text
+    font-family: 'Poppins', sans-serif
+    font-weight: 700
+    font-size: 24px
+    line-height: 36px
+    color: #FAF5EC
+
+@media (max-width: 992px)
+  .footer
+    &-social
+      margin-right: 0
+    &-wrapper
+      flex-direction: column
+      gap: 20px
+
+@media (max-width: 576px)
+  .footer
+    &-wrapper
+      align-items: flex-start
+    &-social
+      &__item
+        width: 36px
+        height: 36px
+      &__link
+        width: 36px
+        height: 36px
+        &::after
+          width: 36px
+          height: 36px
+    &__text
+      font-size: 18px
+      line-height: 27px
+
+@media (max-width: 576px)
+  .footer
+    margin: 40px 0 30px

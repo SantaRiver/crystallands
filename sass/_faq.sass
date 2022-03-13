@@ -1,0 +1,99 @@
+.faq
+  margin-top: 114px
+  overflow-x: hidden
+  &-list
+    &__title
+      width: 101%
+      position: relative
+      padding: 53px 130px 53px 59px
+      font-family: 'Guva Candy'
+      font-weight: 400
+      font-size: 40px
+      line-height: 39px
+      background-image: url("../images/faq.svg")
+      background-size: cover
+      background-repeat: no-repeat
+      color: #FAF5EC
+      cursor: pointer
+      text-transform: uppercase
+      z-index: 2
+      &::after
+        position: absolute
+        content: ''
+        background-image: url("../images/oval.png")
+        width: 61px
+        height: 63px
+        right: 60px
+        background-repeat: no-repeat
+        background-size: cover
+        top: 27%
+    &__text
+      padding-top: 10px
+      font-family: 'Poppins', sans-serif
+      font-weight: 500
+      font-size: 18px
+      line-height: 27px
+    &__item
+      margin-bottom: 25px
+    &__content
+      position: relative
+      display: none
+      padding: 25px
+      background: #FAF5EC
+      box-shadow: inset 14px 14px 27px rgba(242, 217, 187, 0.7), inset -14px -14px 27px rgba(242, 217, 187, 0.7)
+      border-radius: 0px 0px 15px 15px
+      border: 5px solid #dba873
+      top: -30px
+
+.filter__item-drop
+  position: relative
+  &::before
+    position: absolute
+    content: ''
+    background-image: url('../images/arrow-down.svg')
+    background-size: cover
+    background-repeat: no-repeat
+    width: 30px
+    height: 30px
+    right: 76px
+    z-index: 2
+    top: 55px
+  &--active
+    &::before
+      transform: rotate(180deg)
+
+@media (max-width: 992px)
+  .faq
+    &-list
+      &__text
+        font-size: 15px
+        line-height: 24px
+
+@media (max-width: 767px)
+  .faq
+    margin-top: 60px
+    & .container
+      padding: 0 0
+    &-list
+      &__title
+        font-size: 24px
+        line-height: 24px
+        padding: 40px 90px 40px 30px
+        &::after
+          width: 40px
+          height: 41px
+          right: 35px
+        &::before
+          width: 20px
+          height: 20px
+          right: 45px
+          z-index: 2
+          top: 35%
+      &__content
+        padding: 40px 15px 25px
+      &__item
+        margin-bottom: 15px
+      &__text
+        padding-top: 0
+        font-size: 14px
+        line-height: 21px

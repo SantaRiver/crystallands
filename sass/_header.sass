@@ -1,0 +1,222 @@
+.header
+  position: relative
+  &::after
+    position: absolute
+    content: ''
+    background-image: url('../images/header.png')
+    height: 92px
+    width: 100%
+    background-repeat: no-repeat
+    background-size: cover
+    top: 0
+    left: 0
+    right: 0
+    z-index: 1
+  &-burger
+    display: none
+  &-wrap
+    display: flex
+    align-items: center
+    z-index: 5
+    &__button
+      display: none
+  &-nav
+    margin-right: 10px
+  &-wrapper
+    position: relative
+    padding-top: 20px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    z-index: 3
+  &-social
+    margin-right: 35px
+    display: flex
+    gap: 15px
+    &__item
+      width: 36px
+      height: 36px
+    &__link
+      display: block
+      position: relative
+      &::after
+        position: absolute
+        content: ''
+        background-repeat: no-repeat
+        background-size: cover
+        width: 36px
+        height: 36px
+      &.twitter
+        &::after
+          background-image: url('../images/twitter.png')
+      &.discord
+        &::after
+          background-image: url('../images/discord.png')
+      &.social
+        &::after
+          background-image: url('../images/social.png')
+      &.mail
+        &::after
+          background-image: url('../images/mail.png')
+  &-menu
+    display: flex
+    gap: 30px
+    font-family: 'Guva Candy'
+    font-weight: 400
+    font-size: 18px
+    color: #fff
+    &__link
+      transition: all, .3s
+  &-logo
+    font-family: 'Yataghan'
+    font-weight: 400
+    font-size: 36px
+    color: #fff
+  &-button
+    width: 220px
+    padding: 14px
+    font-family: 'Guva Candy'
+    font-weight: 400
+    font-size: 18px
+    text-align: center
+    color: #fff
+    background: linear-gradient(277.75deg, #A6DC54 13.56%, #A6DC54 13.57%, #BEE482 117%)
+    box-shadow: 4px 4px 0px rgba(87, 179, 24, 0.8), inset -4px -4px 4px rgba(140, 140, 140, 0.25), inset 4px 4px 4px rgba(255, 255, 255, 0.46)
+    border-radius: 15px
+    span
+      text-shadow: 1px 0 1px #3B830A, 0 1px 1px #3B830A, -1px 0 1px #3B830A, 0 -1px 1px #3B830A
+    &--mobile
+      display: none
+
+// .rightside-menu
+//   max-width: 260px
+//   height: min-content
+//   padding: 70px 50px 50px 50px
+//   position: absolute
+//   z-index: 10
+//   right: 0
+//   top: 0
+//   bottom: 0
+//   width: 100%
+//   background-color: #fff
+//   box-shadow: 0px 10px 30px rgba(29, 76, 163, 0.05)
+//   border-radius: 20px
+//   transition: all, 0.5s
+//   &.rightside-menu--close
+//     transform: translateX(500%)
+//   &__close
+//     position: absolute
+//     background-color: transparent
+//     border: none
+//     top: 20px
+//     right: 20px
+//     cursor: pointer
+//   &__item
+//     margin-bottom: 2px
+//     font-size: 32px
+//     line-height: 50px
+//     font-weight: 700
+//     text-transform: uppercase
+//     color: #323232
+//     transition: all, .3s
+
+@media (max-width: 1150px)
+  .header
+    &-social
+      margin-right: 0
+    &-menu
+      gap: 25px
+      font-size: 15px
+    &-button
+      font-size: 15px
+      width: 170px
+    &-wrap
+      gap: 30px
+
+@media (max-width: 992px)
+  .header
+    &::after
+      height: 78px
+    &-button
+      display: none
+      &--mobile
+        display: block
+        font-size: 18px
+        line-height: 18px
+        width: 220px
+        margin: 248px auto 0
+        position: relative
+        z-index: 2
+    &-wrap
+      position: absolute
+      height: 100vh
+      max-height: 800px
+      width: 207px
+      z-index: 10
+      right: -15px
+      top: 0
+      justify-content: space-between
+      flex-direction: column-reverse
+      background: #FAF5EC
+      box-shadow: inset 14px 14px 27px rgba(242, 217, 187, 0.7), inset -14px -14px 27px rgba(242, 217, 187, 0.7)
+      border-radius: 20px 0px 0px 20px
+      border: 5px solid #dba873
+      transition: all, .3s
+      &--close
+        transform: translateX(500%)
+      &__button
+        display: block
+        position: absolute
+        background-image: url('../images/oval.png')
+        width: 30px
+        height: 30px
+        top: 22px
+        right: 12px
+        border: none
+        background-color: transparent
+        background-repeat: no-repeat
+        background-size: contain
+        cursor: pointer
+        display: flex
+        align-items: center
+        justify-content: space-around
+        &::after
+          position: absolute
+          content: ''
+          background-image: url(../images/close.svg)
+          width: 16px
+          height: 16px
+          background-repeat: no-repeat
+          background-size: cover
+    &-menu
+      margin-top: 82px
+      flex-direction: column
+      color: #4F351F
+      font-size: 18px
+      line-height: 18px
+    &-social
+      gap: 10px
+      margin-bottom: 50px
+    &-burger
+      display: block
+      background-color: transparent
+      border: none
+      cursor: pointer
+    &-wrapper
+      overflow-x: hidden
+      &--overflow
+        overflow-x: visible
+
+@media (max-width: 767px)
+  .header
+    &-logo
+      font-size: 24px
+      line-height: 42px
+    &-wrapper
+      padding-top: 15px
+
+@media (max-width: 576px)
+  .header
+    &-button
+      &--mobile
+        margin: 182px auto 0

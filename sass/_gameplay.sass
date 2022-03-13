@@ -1,0 +1,907 @@
+.gameplay
+  min-height: 90vh
+  padding-top: 80px
+  padding-bottom: 80px
+  position: relative
+  &-cursor
+    position: absolute
+    left: 61%
+    z-index: 3
+    bottom: -20px
+    transition: all, .3s
+    &::after
+      position: absolute
+      content: ''
+      background-image: url('../images/cursor-oval.svg')
+      width: 20px
+      height: 20px
+      top: -3px
+      left: -5px
+      animation-name: move-circle
+      animation-duration: 900ms
+      animation-timing-function: ease
+      animation-iteration-count: infinite
+      animation-fill-mode: forwards
+    &--hidden
+      display: none
+  &-line
+    display: none
+  &-wrapper
+    position: relative
+    margin-top: 120px
+    width: 1140px
+    height: 543px
+  &-wrap
+    position: relative
+    margin: 0 auto
+    padding-top: 210px
+    text-align: center
+    display: block
+    z-index: 5
+    &::before
+      position: absolute
+      content: ''
+      background-image: url(../images/button-bg.svg)
+      background-repeat: no-repeat
+      width: 330px
+      height: 95px
+      z-index: 1
+      transform: translateX(-5px)
+  &-button
+    position: relative
+    display: inline-block
+    padding: 11px
+    width: 314px
+    font-family: 'Yataghan'
+    font-weight: 400
+    color: #fff
+    font-size: 36px
+    line-height: 63px
+    background: linear-gradient(96.43deg, #FFC132 -8.72%, #FFA900 80.63%, #FFAF1A 112.09%)
+    box-shadow: inset 4px 4px 5px rgba(255, 232, 172, 0.51), inset -5px -5px 6px rgba(209, 80, 8, 0.39)
+    border-radius: 25px
+    cursor: pointer
+    z-index: 2
+    transform: translateY(6px)
+    &::after
+      position: absolute
+      content: ''
+      background-image: url('../images/button.svg')
+      width: 95px
+      height: 42px
+      background-repeat: no-repeat
+      background-size: cover
+      left: 9px
+      top: 6px
+    span
+      text-shadow: 2px 0 2px #D27A09, 0 2px 2px #D27A09, -2px 0 2px #D27A09, 0 -2px 2px #D27A09
+  &-list
+    &__item
+      position: absolute
+      cursor: pointer
+      opacity: 0
+      transition: all, .6s
+      &::before
+        position: absolute
+        content: ''
+        width: 200px
+        height: 60px
+        background: #A7774B
+        box-shadow: inset -14px -14px 27px rgba(242, 217, 187, 0.7)
+        border-radius: 15px
+        left: -7px
+        top: -6px
+        z-index: 1
+        transition: all, .3s
+      &::after
+        position: absolute
+        content: ''
+        width: 186px
+        height: 48px
+        background: #FAF5EC
+        box-shadow: inset 14px 14px 27px rgba(242, 217, 187, 0.7), inset -14px -14px 27px rgba(242, 217, 187, 0.7)
+        border-radius: 15px
+        text-align: center
+        top: 0
+        z-index: 3
+        transition: all, .3s
+      span
+        position: relative
+        padding: 9px
+        font-family: 'Poppins', sans-serif
+        font-weight: 600
+        font-size: 20px
+        line-height: 30px
+        width: 186px
+        display: block
+        text-align: center
+        z-index: 5
+        transition: all, .3s
+      &--visible
+        opacity: 1
+        & .gameplay-sublist__item
+          opacity: 0
+  &-sublist
+    &__item
+      position: absolute
+      cursor: pointer
+      &::after
+        position: absolute
+        content: ''
+        max-width: 141px
+        width: 141px
+        height: 42px
+        background: #A7774B
+        box-shadow: inset 14px 14px 27px rgba(242, 217, 187, 0.3), inset -14px -14px 27px rgba(242, 217, 187, 0.3)
+        border-radius: 16px
+        border: 4px solid #FAF5EC
+        top: 0
+        transition: all, .3s
+      span
+        position: relative
+        max-width: 130px
+        padding: 5px
+        font-family: 'Poppins', sans-serif
+        font-weight: 500
+        font-size: 16px
+        line-height: 24px
+        color: $beige
+        display: block
+        text-align: center
+        z-index: 5
+        top: 4px
+        left: 5px
+        transition: all, .3s
+    &__needs
+      &--visible
+        & .gameplay-sublist__item
+          opacity: 1
+          transition: all, .3s
+    &__trade
+      &--visible
+        & .gameplay-sublist__item
+          opacity: 1
+          transition: all, .3s
+    &__work
+      &--visible
+        & .gameplay-sublist__item
+          opacity: 1
+          transition: all, .3s
+    &__hunt
+      &--visible
+        & .gameplay-sublist__item
+          opacity: 1
+          transition: all, .3s
+    &__craft
+      &--visible
+        & .gameplay-sublist__item
+          opacity: 1
+          transition: all, .3s
+    &__building
+      &--visible
+        & .gameplay-sublist__item
+          opacity: 1
+          transition: all, .3s
+    &__land
+      &--visible
+        & .gameplay-sublist__item
+          opacity: 1
+          transition: all, .3s
+
+@keyframes move-circle
+  0%
+    opacity: 0
+    transform: scale(.5) translate(2px, 2px)
+
+  50%
+    opacity: 1
+  100%
+    transform: scale(1.2) translate(-6px, -6px)
+    opacity: 0
+
+// @keyframes heartbeat
+//   0%
+//     transform: scale( 1 )
+
+//   20%
+//     transform: scale( 1.1 )
+
+//   40%
+//     transform: scale( 1.2 )
+
+.needs
+  top: 118px
+  left: 269px
+  & .line
+    position: absolute
+    left: 124px
+    top: 12px
+
+.trade
+  top: 94px
+  right: 339px
+  & .line
+    position: absolute
+    left: -72px
+    top: -3px
+
+.work
+  right: 173px
+  top: 183px
+  & .line
+    position: absolute
+    left: -92px
+    top: 20px
+
+.hunt
+  right: 193px
+  & .line
+    position: absolute
+    left: -69px
+    top: -16px
+
+.craft
+  right: 290px
+  bottom: 100px
+  & .line
+    position: absolute
+    top: -117px
+    left: -127px
+
+.building
+  bottom: 134px
+  left: 272px
+  & .line
+    position: absolute
+    top: -122px
+    right: -141px
+
+.land
+  left: 175px
+  bottom: 257px
+  & .line
+    position: absolute
+    right: -51px
+    top: 17px
+
+.health
+  position: absolute
+  top: -119px
+  left: -204px
+  & .line
+    position: absolute
+    max-width: 160%
+    left: 76px
+    top: 34px
+
+.hunger
+  position: absolute
+  top: -119px
+  left: -45px
+  & .line
+    position: absolute
+    left: 65px
+    top: 41px
+
+.energy
+  position: absolute
+  top: -119px
+  right: -60px
+  & .line
+    position: absolute
+    max-width: 140%
+    left: -99px
+    top: 42px
+
+.market
+  max-width: 220px
+  position: absolute
+  top: -94px
+  left: 41px
+  &::after
+    max-width: 220px
+    min-width: 220px
+    width: 220px
+  span
+    left: 0
+    min-width: 220px
+    max-width: 220px
+  & .line
+    left: 10px
+    top: 10px
+
+.marker
+  max-width: 220px
+  position: absolute
+  top: -32px
+  right: -268px
+  &::after
+    max-width: 220px
+    min-width: 220px
+    width: 220px
+  span
+    left: 0
+    min-width: 220px
+    max-width: 220px
+  & .line
+    left: -95px
+    top: 33px
+
+.forest
+  right: -159px
+  top: -29px
+  & .line
+    max-width: 140%
+    top: 30px
+    left: -73px
+
+.mine
+  right: -152px
+  bottom: -28px
+  & .line
+    top: -8px
+    left: -78px
+
+.forest2
+  right: -182px
+  top: 30px
+  & .line
+    max-width: 140%
+    left: -140px
+    top: -7px
+
+.mine2
+  right: -137px
+  bottom: -88px
+  & .line
+    top: -61px
+    left: -103px
+
+.inworkshop
+  bottom: -92px
+  left: -137px
+  & .line
+    top: -82px
+    left: 60px
+
+.infoundry
+  bottom: -92px
+  left: 20px
+  & .line
+    top: -85px
+    left: 59px
+
+.incorral
+  bottom: -92px
+  right: -279px
+  & .line
+    max-width: 160%
+    top: -84px
+    left: -163px
+
+.ingarden
+  bottom: -92px
+  right: -122px
+  & .line
+    top: -95px
+    left: -73px
+
+.workshop
+  position: absolute
+  left: -230px
+  top: -22px
+  & .line
+    top: 18px
+    right: -132px
+
+.farm
+  left: -270px
+  & .line
+    max-width: 160%
+    top: -21px
+    right: -154px
+
+.foundry
+  left: -270px
+  bottom: -107px
+  & .line
+    max-width: 160%
+    top: -87px
+    right: -157px
+
+.corral
+  bottom: -118px
+  left: -109px
+  & .line
+    top: -95px
+    right: -32px
+
+.forge
+  bottom: -118px
+  right: 5px
+  & .line
+    right: 57px
+
+.ownership
+  left: -141px
+  top: -78px
+  & .line
+    right: -43px
+    top: 14px
+
+.rent
+  left: -173px
+  top: -6px
+  & .line
+    right: -73px
+    top: 17px
+
+.line
+  pointer-events: none
+
+.modal
+  &-dialog
+    position: fixed
+    top: 50%
+    left: 50%
+    padding: 45px 40px
+    transform: translate(-50%, -50%)
+    background-image: url('../images/popup.png')
+    background-repeat: no-repeat
+    background-size: cover
+    width: 1140px
+    height: 580px
+    visibility: hidden
+    opacity: 0
+    transition: all .3s
+    overflow: auto
+    max-height: 90%
+    z-index: 50
+    &--visible
+      visibility: visible
+      opacity: 1
+  &-text
+    font-family: 'Poppins', sans-serif
+    font-weight: 500
+    font-size: 16px
+    line-height: 140%
+    color: #4F351F
+    max-width: 900px
+    margin: 25px auto
+    max-height: 410px
+    overflow: auto
+  &-close
+    position: absolute
+    background-image: url('../images/oval.png')
+    width: 60px
+    height: 60px
+    top: 28px
+    right: 36px
+    border: none
+    background-color: transparent
+    background-repeat: no-repeat
+    background-size: contain
+    cursor: pointer
+    display: flex
+    align-items: center
+    justify-content: space-around
+    &::after
+      position: absolute
+      content: ''
+      background-image: url(../images/close.svg)
+      width: 30px
+      height: 30px
+      background-repeat: no-repeat
+      background-size: cover
+
+@media (max-width: 1200px)
+  .gameplay
+    &-cursor
+      left: 60%
+    &-wrapper
+      width: 992px
+      margin-left: auto
+      margin-right: auto
+    &-button
+      width: 230px
+      font-size: 29px
+      line-height: 37px
+    &-wrap
+      &::before
+        width: 240px
+        height: 70px
+        background-size: cover
+    &-list
+      &__item
+        span
+          font-size: 15px
+          line-height: 20px
+          width: 140px
+        &::after
+          width: 140px
+          height: 42px
+        &::before
+          width: 155px
+          height: 55px
+    &-sublist
+      &__item
+        &::after
+          width: 125px
+        span
+          width: 110px
+          font-size: 13px
+
+  .modal
+    &-dialog
+      width: 850px
+      height: auto
+      background-size: contain
+    &-text
+      max-width: 650px
+      margin: 4px auto
+      max-height: 340px
+      overflow: auto
+
+  .trade
+    & .line
+      left: -31px
+      top: 20px
+      max-width: 139%
+
+  .needs
+    & .line
+      left: 88px
+      top: 15px
+      max-width: 138%
+
+  .health
+    & .line
+      max-width: 160%
+      left: 76px
+      top: 34px
+
+  .hunger
+    & .line
+      left: 65px
+      top: 41px
+
+  .energy
+    right: -103px
+    & .line
+      left: -99px
+      top: 42px
+
+  .marker
+    & .line
+      left: -53px
+      top: 33px
+
+  .land
+    left: 200px
+
+  .forest
+    right: -148px
+    top: -42px
+
+  .work
+    right: 186px
+
+  .hunt
+    right: 214px
+
+  .building
+    bottom: 150px
+    & .line
+      top: -116px
+      right: -92px
+      max-width: 140%
+
+  .workshop
+    & .line
+      top: 18px
+      right: -132px
+
+  .farm
+    & .line
+      top: -21px
+      right: -154px
+
+  .foundry
+    & .line
+      top: -87px
+      right: -157px
+
+  .corral
+    left: -122px
+    & .line
+      top: -95px
+      right: -32px
+
+  .forge
+    & .line
+      right: 57px
+      top: -122px
+
+  .craft
+    & .line
+      top: -149px
+      left: -112px
+      max-width: 140%
+
+  .inworkshop
+    & .line
+      top: -82px
+      left: 60px
+
+  .infoundry
+    left: 7px
+    & .line
+      top: -85px
+      left: 59px
+
+  .ingarden
+    & .line
+      top: -90px
+      left: -73px
+
+  .incorral
+    right: -260px
+    & .line
+      top: -79px
+      left: -163px
+      max-width: 160%
+
+@media (max-width: 992px)
+  .line
+    display: none
+  .gameplay
+    min-height: auto
+    padding-top: 0
+    padding-bottom: 60px
+    &-cursor
+      left: 90%
+      width: 45px
+      height: 36px
+    &-button
+      width: 307px
+      font-size: 36px
+      line-height: 63px
+    &-wrapper
+      max-width: 320px
+      position: relative
+      width: auto
+      height: auto
+    &-line
+      display: none
+      position: absolute
+      &--visible
+        display: block
+        position: absolute
+        background-color: #FAF5EB
+        height: 90%
+        max-height: 900px
+        width: 2px
+        top: 44px
+        right: 50.5%
+
+    &-wrap
+      padding-top: 0
+      transform: translateX(-7px)
+      z-index: 1
+      &::before
+        width: 320px
+        height: 95px
+        z-index: 1
+        transform: translateX(-5px)
+        background-size: contain
+    &-list
+      display: none
+      &--visible
+        display: block
+        margin-top: 40px !important
+        display: flex
+        flex-wrap: wrap
+        margin: 0 auto
+        width: 304px
+        gap: 64px
+      &__wrapper
+        display: flex
+        flex-direction: column
+        gap: 30px
+      &__item
+        width: 120px
+        position: relative
+        &::before
+          width: 120px
+          height: 50px
+          font-size: 16px
+          line-height: 24px
+          left: -4px
+          top: -5px
+        &::after
+          width: 112px
+          height: 40px
+        span
+          width: 114px
+          font-size: 16px
+          line-height: 24px
+        &--visible
+          display: block
+          & .gameplay-sublist__item
+            display: none
+    &-sublist
+      &__item
+        position: relative
+        display: none
+        margin-top: 20px
+        &::after
+          width: 115px
+        span
+          width: 105px
+          font-size: 14px
+          line-height: 21px
+
+      &__building,
+      &__needs,
+      &__land,
+      &__trade,
+      &__work,
+      &__hunt,
+      &__craft
+        &--visible
+          & .gameplay-sublist__item
+            display: block
+
+  .needs, .trade, .building, .rent, .ownership, .land, .work, .hunt, .craft, .health, .energy, .hunger, .workshop, .farm, .foundry, .corral, .forge, .market, .marker, .forest, .mine, .forest2, .mine2, .inworkshop, .infoundry, .ingarden, .incorral
+    left: auto
+    top: auto
+    right: auto
+    bottom: auto
+  .craft
+    flex-basis: 100%
+    margin-left: 90px
+  .health, .ownership
+    margin-top: 15px
+  .needs, .land, .building
+    span
+      position: relative
+      &::before
+        position: absolute
+        content: ''
+        background-image: url(../images/line-left.svg)
+        width: 33px
+        height: 13px
+        right: -34px
+        background-repeat: no-repeat
+        background-size: cover
+  .trade, .work, .hunt
+    span
+      position: relative
+
+      &::before
+        position: absolute
+        content: ''
+        background-image: url(../images/line-left.svg)
+        width: 33px
+        height: 13px
+        left: -36px
+        background-repeat: no-repeat
+        background-size: cover
+        transform: scale(-1, 1)
+  .health, .hunger, .energy, .ownership, .rent, .foundry, .corral, .forge, .farm
+    span
+      position: relative
+      &::before
+        position: absolute
+        content: ''
+        background-image: none
+        background-color: #FAF5EB
+        background-size: auto
+        width: 2px
+        height: 12px
+        right: 50%
+        top: -16px
+
+  .market, .marker, .forest, .mine, .forest2, .mine2
+    span
+      position: relative
+      &::before
+        position: absolute
+        content: ''
+        background-image: none
+        background-color: #FAF5EB
+        background-size: auto
+        width: 2px
+        height: 12px
+        left: 50%
+        top: -16px
+
+  .incorral, .ingarden, .infoundry
+    span
+      position: relative
+      &::before
+        position: absolute
+        content: ''
+        background-image: none
+        background-color: #FAF5EB
+        background-size: auto
+        width: 2px
+        height: 12px
+        left: 48%
+        top: -16px
+
+  .workshop, .forest, .forest2
+    span
+      position: relative
+      &::before
+        position: absolute
+        content: ''
+        background-image: none
+        background-color: #FAF5EB
+        background-size: auto
+        width: 2px
+        height: 17px
+        left: 50%
+        top: -21px
+  .market, .marker
+    span
+      &::before
+        left: 25%
+  .market
+    span
+      &::before
+        height: 17px
+        top: -21px
+
+@media (max-width: 920px)
+  .modal
+    &-dialog
+      background-image: url('../images/modal-mobile.svg')
+      width: 303px
+      height: 796px
+      padding: 0
+      padding-top: 50px
+      background-size: cover
+    &-text
+      font-size: 12px
+      line-height: 18px
+      width: 256px
+      max-height: 609px
+    &-close
+      top: 20px
+      right: 25px
+      width: 30px
+      height: 30px
+      &::after
+        left: 7px
+        width: 16px
+        height: 16px
+
+@media (max-width: 530px)
+  .gameplay
+    &-sublist
+      &__item
+        span
+          font-size: 10px
+          top: 5px
+    // &-list
+    //   &--visible
+    //     gap: 45px
+  .market, .marker
+    left: -20px
+    max-width: 140px
+    &::after
+      max-width: 140px
+      min-width: 140px
+      width: 140px
+    span
+      min-width: 130px
+      max-width: 130px
+      left: 5px
+      &::before
+        left: 50%
+
+@media (max-width: 330px)
+  .gameplay
+    & .container
+      padding: 0

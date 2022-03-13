@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="0f9d5934-bfa4-4761-b326-c1abd0d4e3c7" name="cystallands.front">
+        <fileTransfer rootFolder="/var/www/www-root/data/www/www.crystallands.io" accessType="SFTP" host="194.87.186.52" port="22" sshConfigId="e93b5988-5192-40f6-98aa-34da9ef31029" sshConfig="RUVDS | animezation">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
