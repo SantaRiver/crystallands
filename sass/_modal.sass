@@ -1,0 +1,89 @@
+.modal
+    &-text
+        font-family: 'Poppins', sans-serif
+        font-weight: 500
+        font-size: 27px
+        text-align: center
+        line-height: 140%
+        color: #4F351F
+        max-width: 900px
+        margin: 25px auto
+        max-height: 410px
+        overflow: auto
+    &-dialog
+        display: flex
+        align-items: center
+        position: fixed
+        top: 50%
+        left: 50%
+        padding: 45px 40px
+        -webkit-transform: translate(-50%, -50%)
+        -ms-transform: translate(-50%, -50%)
+        transform: translate(-50%, -50%)
+        background-image: url(../images/popup.png)
+        background-repeat: no-repeat
+        background-size: cover
+        width: 1140px
+        height: 580px
+        visibility: hidden
+        opacity: 0
+        -webkit-transition: all .3s
+        -o-transition: all .3s
+        transition: all .3s
+        overflow: auto
+        max-height: 90%
+        z-index: 50
+        &--visible
+            visibility: visible
+            opacity: 1
+    &-close
+        position: absolute
+        background-image: url(../images/oval.png)
+        width: 60px
+        height: 60px
+        top: 28px
+        right: 36px
+        border: none
+        background-color: transparent
+        background-repeat: no-repeat
+        background-size: contain
+        cursor: pointer
+        display: -webkit-box
+        display: -ms-flexbox
+        display: flex
+        -webkit-box-align: center
+        -ms-flex-align: center
+        align-items: center
+        -ms-flex-pack: distribute
+        justify-content: space-around
+
+@media (max-width: 1200px)
+    .modal
+        &-dialog
+            width: 810px
+            height: auto
+            background-size: contain
+            align-items: flex-start
+
+@media (max-width: 920px)
+    .modal
+        &-dialog
+            background-image: url(../images/modal-mobile.svg)
+            width: 303px
+            height: 796px
+            padding: 0
+            padding-top: 50px
+            background-size: cover
+            align-items: center
+        &-text
+            font-size: 18px
+            line-height: 140%
+            max-width: 300px
+            margin: 0 auto
+            max-height: 87%
+            overflow: auto
+        &-close
+            top: 20px
+            right: 25px
+            width: 30px
+            height: 30px
